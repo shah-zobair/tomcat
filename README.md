@@ -1,6 +1,6 @@
-# tomcat Built for OpenShift
+# RHEL-Tomcat-OpenJdk Image for OpenShift
 
-tomcat base image with sample war from spring boot
+tomcat base image with sample war application. War was built from spring boot
 
 Base Image from
 
