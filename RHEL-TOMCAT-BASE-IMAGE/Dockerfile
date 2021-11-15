@@ -29,8 +29,10 @@ RUN curl -O https://downloads.apache.org/tomcat/tomcat-8/v8.5.72/bin/apache-tomc
     java -version
 
 RUN useradd tomcat -u 1001 \
- #&& groupmod tomcat -g 1001 \
- && chown -R tomcat:tomcat $CATALINA_HOME
+ && chown -R tomcat:tomcat $CATALINA_HOME \
+ && chmod 755 -R $CATALINA_HOME \
+ && chmod 777 -R $CATALINA_HOME/lib $CATALINA_HOME/temp $CATALINA_HOME/work $CATALINA_HOME/logs $CATALINA_HOME/bin $CATALINA_HOME/webapps \
+ && chmod +x /opt/tomcat/bin/catalina.sh
 
 WORKDIR $CATALINA_HOME/webapps
 

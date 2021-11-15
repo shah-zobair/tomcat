@@ -12,3 +12,8 @@ Built for OpenShift
 
 
 Image: docker pull quay.io/szobair/rhel7-tomcat8-jdk1.8
+
+Expose the service: oc expose service frontend
+Patch the route as edge: oc patch route frontend -p '{"spec": {"tls": {"termination": "edge"}}}'
+
+Test: {URL}/sample-web2/greet/shah

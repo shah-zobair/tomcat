@@ -1,4 +1,4 @@
-FROM rhel-tomcat
+FROM rhel7-tomcat
 
 MAINTAINER Shah Zobair <szobair@redhat.com>
 
